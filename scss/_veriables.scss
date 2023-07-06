@@ -1,0 +1,24 @@
+/* Variables */
+
+:root {
+  --main-ff: "Nunito", "Arial", sans-serif;
+  --secondary-ff: "Roboto", "Arial", sans-serif;
+  --main-color: #211f25;
+  --secondary-color: #fff;
+  --extra-color: #000;
+  --links-color: #ff007a;
+  --text-color: #3d3a41;
+  --bg-color: #fcfbff;
+  --extra-bg-color: #f4fbff;
+  --article-bg-color: #6b50ff;
+}
+
+$main-ff:var(--main-ff);
+$secondary-ff:var(--secondary-ff);
+$main-color:var(--main-color);
+$secondary-color:var(--secondary-color);
+$extra-color:var(--extra-color);
+$links-color:var(--links-color);
+$bg-color:var(--bg-color);
+$extra-bg-color:var(--extra-bg-color);
+$article-bg-color:var(--article-bg-color);

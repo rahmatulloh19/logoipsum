@@ -1,0 +1,61 @@
+@mixin layout($jc:space-between, $ai:center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+// @mixin flow() {
+//   flex-direction: $fxd;
+
+// }
+
+@mixin default-text($mb, $ff:v.$main-ff, $fz:16px, $fw:400, $lh:normal, $ta:center) {
+  margin-top: 0;
+  margin-bottom: $mb;
+  font-family: $ff;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  text-align: $ta;
+}
+
+@mixin view($miw, $fz:16px, $fw:400, $c) {
+  display: inline-block;
+  min-width: $miw;
+  font-size: $fz;
+  font-weight: $fw;
+  color: $c;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+@mixin unstyled-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin transition($property) {
+  transition-property: $property;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+@mixin psevdo-el($w, $h, $bgi, $pos:center, $bgz:contain) {
+  display: block;
+  width: $w;
+  height: $h;
+  background-image: url($bgi);
+  background-repeat: no-repeat;
+  background-position: $pos;
+  background-size: $bgz;
+  content: "";
+} 
+
+@mixin responsive($miw) {
+  @media only screen and (min-width: $miw) {
+    @content;
+  }
+}

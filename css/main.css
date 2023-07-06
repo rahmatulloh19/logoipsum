@@ -1,0 +1,296 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* Fonts Nunito */
+@font-face {
+  font-family: "Nunito";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/nunitoregular.woff2") format("woff2"), url("../fonts/nunitoregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/nunitomedium.woff2") format("woff2"), url("../fonts/nunitomedium.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/nunitosemibold.woff2") format("woff2"), url("../fonts/nunitosemibold.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/nunitobold.woff2") format("woff2"), url("../fonts/nunitobold.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/nunitoextrabold.woff2") format("woff2"), url("../fonts/nunitoextrabold.woff") format("woff");
+}
+/* Fonts Roboto */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/robotoregular.woff2") format("woff2"), url("../fonts/robotoregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
+}
+/* Variables */
+:root {
+  --main-ff: "Nunito", "Arial", sans-serif;
+  --secondary-ff: "Roboto", "Arial", sans-serif;
+  --main-color: #211f25;
+  --secondary-color: #fff;
+  --extra-color: #000;
+  --links-color: #ff007a;
+  --text-color: #3d3a41;
+  --bg-color: #fcfbff;
+  --extra-bg-color: #f4fbff;
+  --article-bg-color: #6b50ff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  font-family: var(--main-ff);
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.dark-mode {
+  --main-color: #fff;
+  --extra-color: #fff;
+  --links-color: #6b50ff;
+  --text-color: #d6d6d6;
+  --bg-color: #211f25;
+  --extra-bg-color: #211f25;
+  --article-bg-color: linear-gradient(35deg, #1a1822 0%, #9040e3 100%), #6b50ff;
+}
+
+/* Visually-hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header styles begin */
+/* Header styles end */
+/* Hero styles started */
+/* Hero styles finished */
+/* Software section styles started */
+/* Software section styles finished */
+/* Protection section styles started */
+/* Protection section styles finished */
+/* Customers section styles started */
+/* Customers section styles finished */
+/* Pricing section styles started */
+/* Pricing section styles finished */
+/* Contact section styles started */
+/* Contact section styles finished */
+/* News section styles started */
+/* News section styles finished */
+/* Site footer styles begin */
+/* Site footer styles end *//*# sourceMappingURL=main.css.map */

@@ -1,0 +1,53 @@
+
+/* Fonts Nunito */
+@font-face {
+  font-family: "Nunito";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/nunitoregular.woff2") format("woff2"),
+       url("../fonts/nunitoregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/nunitomedium.woff2") format("woff2"),
+       url("../fonts/nunitomedium.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/nunitosemibold.woff2") format("woff2"),
+       url("../fonts/nunitosemibold.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/nunitobold.woff2") format("woff2"),
+       url("../fonts/nunitobold.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/nunitoextrabold.woff2") format("woff2"),
+       url("../fonts/nunitoextrabold.woff") format("woff");
+}
+
+/* Fonts Roboto */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/robotoregular.woff2") format("woff2"),
+       url("../fonts/robotoregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+       url("../fonts/robotomedium.woff") format("woff");
+}
