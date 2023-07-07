@@ -64,6 +64,7 @@
     @include m.psevdo-el(36px, 36px, "../../images/play.svg");
   }
 }
+
 .hero__img {
   width: 100%;
 }
@@ -156,6 +157,12 @@
     &:last-child {
       margin: 0;
     }
+  }
+  
+  .hero__link--video {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    order: 1;
   }
   
   .hero__img {

@@ -107,16 +107,21 @@
   }
   
   .software__list {
-    display: flex;
+    @include m.layout;    
+    flex-wrap: wrap;
   }
 
   .software__item {
     display: block;
+    max-width: 343px;
     border-radius: 8px;
   }
   .software__item {
     background-color: transparent;
     @include m.transition(background-color color);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
     &:hover {
       background-color: v.$li-bg-color;
       .software__link {

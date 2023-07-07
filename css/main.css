@@ -702,6 +702,13 @@ img {
   .hero__link:last-child {
     margin: 0;
   }
+  .hero__link--video {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
   .hero__img {
     width: auto;
     margin: 0 auto;
@@ -848,9 +855,18 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .software__item {
     display: block;
+    max-width: 343px;
     border-radius: 8px;
   }
   .software__item {
@@ -865,6 +881,9 @@ img {
          -o-transition-timing-function: ease;
             transition-timing-function: ease;
   }
+  .software__item:not(:last-child) {
+    margin-bottom: 0;
+  }
   .software__item:hover {
     background-color: var(--li-bg-color);
   }
@@ -874,6 +893,148 @@ img {
 }
 /* Software section styles finished */
 /* Protection section styles started */
+.protection {
+  padding-bottom: 66px;
+}
+
+.protection__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.protection__item {
+  padding: 16px 16px 20px;
+}
+.protection__item:first-child {
+  background-color: var(--li-bg-color);
+}
+
+.protection__item-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.protection__item:last-child .protection__item-inner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.protection__text {
+  text-align: center;
+}
+
+.protection__subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.38px;
+  color: var(--main-color);
+}
+
+.protection__desc {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 155%;
+  text-align: center;
+  letter-spacing: 0.32px;
+  color: var(--text-color);
+}
+
+.protection__link {
+  display: inline-block;
+  min-width: 187px;
+  padding: 17px 16px;
+  line-height: 155%;
+  letter-spacing: 0.16px;
+  color: var(--links-color);
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid var(--links-color);
+  border-radius: 32px;
+}
+
+.protection__img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 375px) {
+  .protection__img {
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .protection__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+  .protection__subtitle {
+    text-align: left;
+  }
+  .protection__desc {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .protection__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 100px 0;
+  }
+  .protection__item-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+  .protection__item:last-child .protection__item-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .protection__img {
+    margin-bottom: 0;
+  }
+  .protection__text {
+    display: block;
+  }
+}
 /* Protection section styles finished */
 /* Customers section styles started */
 /* Customers section styles finished */
