@@ -23,26 +23,14 @@
   border: none;
 }
 
-@mixin default-text($mb, $ff:v.$main-ff, $fz:16px, $fw:400, $lh:normal, $ta:center) {
+@mixin default-text($mb, $fz:16px, $fw:400, $lh:normal, $ta:center) {
   margin-top: 0;
   margin-bottom: $mb;
-  font-family: $ff;
   font-size: $fz;
   font-weight: $fw;
   line-height: $lh;
   text-align: $ta;
 }
-
-@mixin view($miw, $fz:16px, $fw:400, $c) {
-  display: inline-block;
-  min-width: $miw;
-  font-size: $fz;
-  font-weight: $fw;
-  color: $c;
-  text-align: center;
-  text-decoration: none;
-}
-
 
 @mixin unstyled-list {
   margin-top: 0;

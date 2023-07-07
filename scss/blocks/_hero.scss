@@ -13,7 +13,7 @@
 
 .hero__inner {
   margin-top: 45px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .hero__title-wrapper {
@@ -83,6 +83,7 @@
   .hero {
     background-image: url("../../images/dekstop-light.png");
   }
+
   .hero__content {
     @include m.layout;
   }
@@ -155,6 +156,11 @@
     &:last-child {
       margin: 0;
     }
+  }
+  
+  .hero__img {
+    width: auto;
+    margin: 0 auto;
   }
 }
 

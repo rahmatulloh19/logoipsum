@@ -8,6 +8,6 @@
   ],
   "liveSassCompile.settings.autoprefix": [
     "last 2 version",
-    "> 1% "
+    "> 0.5% "
   ]
 }

@@ -10,6 +10,7 @@
   --links-color: #ff007a;
   --text-color: #3d3a41;
   --bg-color: #fcfbff;
+  --li-bg-color: #f7f5ff;
   --extra-bg-color: #f4fbff;
   --article-bg-color: #6b50ff;
   --menu-color: #7e35eb;
@@ -22,7 +23,9 @@ $main-color:var(--main-color);
 $secondary-color:var(--secondary-color);
 $extra-color:var(--extra-color);
 $links-color:var(--links-color);
+$text-color:var(--text-color);
 $bg-color:var(--bg-color);
+$li-bg-color:var(--li-bg-color);
 $extra-bg-color:var(--extra-bg-color);
 $article-bg-color:var(--article-bg-color);
 $menu-color:var(--menu-color);

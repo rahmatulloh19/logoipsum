@@ -3,6 +3,126 @@
 
 /* Software section styles started */
 
+.software {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.software__text {
+  max-width: 345px;
+  margin: 0 auto;
+}
+
+.software__title {
+  @include m.default-text(10px, $fz:31px, $fw:700, $lh:42px);
+  letter-spacing: -0.36px;
+  color: v.$main-color;
+}
+
+.software__desc {
+  @include m.default-text(30px, $lh:22px);
+  letter-spacing: 0.16px;
+  color: v.$text-color;
+}
+
+.software__list {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style: none;
+}
+
+.software__item {
+  padding: 16px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &:before {
+    @include m.psevdo-el(100%, 266px, "../../images/task.svg");
+    margin: 0 auto 33px;
+  }
+}
+
+.software__item--automation {
+  background-color: v.$li-bg-color;
+}
+
+.software__item--automation::before {
+  background-image: url("../../images/automotion.svg");
+}
+
+.software__item--tool::before {
+  background-image: url("../../images/tool.svg");
+}
+
+.software__subtitle {
+  @include m.default-text(16px, $fz:32px, $fw:700, $lh:120%);
+  color: v.$main-color;
+}
+
+.software__desc {
+  @include m.default-text(40px, $lh:155%);
+  color: v.$text-color;
+}
+
+.software__link {
+  @include m.default-text(0, $fw:500, $lh:155%);
+  letter-spacing: 0.32px;
+  color: v.$main-color;
+  text-decoration: none;
+}
 
 
+@include m.responsive(375px) {
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .software__item {
+    &::before {
+      width: 343px;
+    }
+  }
+}
+
+@include m.responsive(630px) {
+  .software__item {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    &::before {
+      flex-shrink: 1;
+    }
+  }
+
+  .software__item-inner {
+    flex-shrink: 3;
+  }
+}
+
+@include m.responsive(1024px) {
+  .software {
+    padding: 60px 0 100px;
+  }
+  
+  .software__list {
+    display: flex;
+  }
+
+  .software__item {
+    display: block;
+    border-radius: 8px;
+  }
+  .software__item {
+    background-color: transparent;
+    @include m.transition(background-color color);
+    &:hover {
+      background-color: v.$li-bg-color;
+      .software__link {
+        color: v.$links-color;
+      }
+    }
+  }
+}
 /* Software section styles finished */
