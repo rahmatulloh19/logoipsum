@@ -98,6 +98,15 @@
 
   .software__item-inner {
     flex-shrink: 3;
+    text-align: left;
+  }
+
+  .software__subtitle {
+    text-align: left;
+  }
+
+  .software__desc {
+    text-align: left;
   }
 }
 
@@ -108,15 +117,12 @@
   
   .software__list {
     @include m.layout;    
-    flex-wrap: wrap;
   }
 
   .software__item {
     display: block;
     max-width: 343px;
     border-radius: 8px;
-  }
-  .software__item {
     background-color: transparent;
     @include m.transition(background-color color);
     &:not(:last-child) {
@@ -127,6 +133,9 @@
       .software__link {
         color: v.$links-color;
       }
+    }
+    &::before {
+      width: auto;
     }
   }
 }

@@ -845,6 +845,13 @@ img {
   .software__item-inner {
     -ms-flex-negative: 3;
         flex-shrink: 3;
+    text-align: left;
+  }
+  .software__subtitle {
+    text-align: left;
+  }
+  .software__desc {
+    text-align: left;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -861,15 +868,11 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   .software__item {
     display: block;
     max-width: 343px;
     border-radius: 8px;
-  }
-  .software__item {
     background-color: transparent;
     -webkit-transition-property: background-color color;
     -o-transition-property: background-color color;
@@ -889,6 +892,9 @@ img {
   }
   .software__item:hover .software__link {
     color: var(--links-color);
+  }
+  .software__item::before {
+    width: auto;
   }
 }
 /* Software section styles finished */
