@@ -6,7 +6,7 @@ elMenuButton.addEventListener("click", () => {
   elHeader.classList.toggle("open");
   if(elHeader.classList.contains("open")) {
     elHeader.classList.add("menu-color");
-    document.body.style.overflowY = "hidden";
+    document.body.style.overflow = "hidden";
   } else {
     elHeader.classList.remove("menu-color")
     document.body.removeAttribute("style");
