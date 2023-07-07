@@ -3,8 +3,159 @@
 
 /* Hero styles started */
 
+.hero {
+  color: v.$secondary-color;
+  background-image: url("../../images/mobile-light.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+}
+
+.hero__inner {
+  margin-top: 45px;
+  padding-bottom: 80px;
+}
+
+.hero__title-wrapper {
+  max-width: 518px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  @include m.default-text(10px, $fz:36px, $fw:800, $lh:42px);
+  letter-spacing: -0.36px;
+}
+
+.hero__desc-wrapper {
+  max-width: 475px;
+  margin: 0 auto;
+}
+
+.hero__desc {
+  @include m.default-text(80px, $lh:22px);
+  letter-spacing: 0.16px;
+}
+
+.hero__link {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  padding: 17px 16px;
+  @include m.default-text(10px, $fw:600, $lh:155%);
+  letter-spacing: 0.16px;
+  color: v.$body-color;
+  text-decoration: none;
+  background-color: v.$links-color;
+  border: 1px solid v.$links-color;
+  border-radius: 32px;
+  &:last-child {
+    margin-bottom: 80px;
+  }
+}
+
+.hero__link--video {
+  @include m.layout(center);
+  column-gap: 16px;
+  padding: 16px;
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  &::after {
+    @include m.psevdo-el(36px, 36px, "../../images/play.svg");
+  }
+}
+.hero__img {
+  width: 100%;
+}
 
 
 
+@include m.responsive(630px) {
+  .hero__title {
+    margin-bottom: 14px;
+    font-size: 41px;
+    line-height: 48px;
+    letter-spacing: -0.41px;
+  }
+}
+
+@include m.responsive(768px) {
+  .hero {
+    background-image: url("../../images/dekstop-light.png");
+  }
+  .hero__content {
+    @include m.layout;
+  }
+
+  .hero__title-wrapper {
+    margin-left: 0;
+  }
+  
+  .hero__title {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .hero__desc-wrapper {
+    margin-left: 0;
+  }
+
+  .hero__desc {
+    text-align: left;
+  }
+
+  .hero__link {
+    max-width: 187px;
+    &:first-child {
+      margin-bottom: 24px;
+    }
+  }
+
+}
+
+@include m.responsive(1024px) {
+  .hero__content {
+    display: block;
+  }
+  
+  .hero__title-wrapper {
+    max-width: 658px;
+    margin: 0 auto;
+  }
+
+  .hero__title {
+    margin-bottom: 28px;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -0.56px;
+    text-align: center;
+  }
+
+  .hero__desc-wrapper {
+    margin: 0 auto;
+  }
+
+  .hero__desc {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .hero__links-wrapper {
+    @include m.layout(center);
+    column-gap: 33px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  .hero__link {
+    min-width: 187px;
+    &:first-child {
+      margin: 0;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
 
 /* Hero styles finished */

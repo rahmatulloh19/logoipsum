@@ -1,3 +1,5 @@
+@use "veriables" as v;
+
 @mixin layout($jc:space-between, $ai:center) {
   display: flex;
   justify-content: $jc;
@@ -8,6 +10,18 @@
 //   flex-direction: $fxd;
 
 // }
+
+@mixin btn($w, $h, $bgi) {
+  display: block;
+  width: $w;
+  height: $h;
+  padding: 0;
+  background-color: transparent;
+  background-image: url($bgi);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
 
 @mixin default-text($mb, $ff:v.$main-ff, $fz:16px, $fw:400, $lh:normal, $ta:center) {
   margin-top: 0;

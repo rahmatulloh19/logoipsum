@@ -8,3 +8,9 @@
   margin: 0 auto;
   padding: 0 16px;
 }
+
+@include m.responsive(630px) {
+  .container {
+    padding: 0 20px;
+  }
+}

@@ -1,4 +1,17 @@
 @use "veriables" as v;
+@use "mixins" as m;
+
+.dark-mode {
+  --body-color: #000;
+  --main-color: #fff;
+  --extra-color: #fff;
+  --links-color: #ff94c7;
+  --text-color: #d6d6d6;
+  --bg-color: #211f25;
+  --extra-bg-color: #211f25;
+  --article-bg-color: linear-gradient(35deg, #1a1822 0%, #9040e3 100%), #6b50ff;
+  --menu-color: #1a1823;
+}
 
 * {
   box-sizing: border-box;
@@ -13,6 +26,7 @@ body {
   flex-direction: column;
   height: 100%;
   font-family: v.$main-ff;
+  background-color: v.$body-color;
 }
 
 img {
@@ -20,12 +34,46 @@ img {
   height: auto;
 }
 
-.dark-mode {
-  --main-color: #fff;
-  --extra-color: #fff;
-  --links-color: #6b50ff;
-  --text-color: #d6d6d6;
-  --bg-color: #211f25;
-  --extra-bg-color: #211f25;
-  --article-bg-color: linear-gradient(35deg, #1a1822 0%, #9040e3 100%), #6b50ff;
+.open .navigation {
+  display: block;
+}
+
+.open .site-header__menu {
+  background-image: url("./../images/menuclose.svg");
+}
+
+.open .site-header__mode {
+  display: none;
+}
+
+.open .site-header__inner {
+  justify-content: flex-start;
+}
+
+.open .site-header .logo {
+  display: block;
+  margin-right: auto;
+}
+
+.open .site-header__inner .logo {
+  margin-left: 0;
+}
+
+.dark-mode .hero {
+  background-image: url("../images/mobile-dark.png");
+}
+
+@include m.responsive(768px) {
+  .dark-mode .hero {
+    background-image: url("../images/dekstop-dark.png");
+  }
+}
+
+.dark-mode .site-header__mode {
+  transform: rotate(180deg);
+}
+
+.menu-color {
+  background-image: none;
+  background-color: v.$menu-color;
 }

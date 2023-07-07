@@ -7,22 +7,89 @@
   <title>Logoipsum</title>
 </head>
 <body>
-  <!-- Site header begin -->
-  <header class="site-header">
-    
-  </header>
-  <!-- Site header end -->
-
   <!-- Site main begin -->
   <main class="site-main">
+    <!-- Section hero started -->
+    <section class="site-main__hero hero">
+      <!-- Site header begin -->
+      <header class="site-header">
+        <div class="container">
+          
+          <div class="site-header__inner">
+            <a href="./index.html" class="logo">
+              <img class="log__img" src="./images/logipsumlogo.svg" 
+              width="160"
+              height="32"
+              alt="Logoipsum's logo">
+            </a>
+            <button class="site-header__menu" type="button"></button>
+            <div class="site-header__items-wrapper">
+              <button class="site-header__mode" type="button"></button>
+              <nav class="site-header__navigation navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item">
+                    <a class="navigation__link" href="./index.html">Home</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link" href="#">About Us</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link" href="#">Pricing</a>
+                  </li>
+                  <li class="navigation__item">
+                    <a class="navigation__link" href="#">Contact Us</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Site header end -->
+      <div class="hero__inner">
+        <div class="container">
+          <div class="hero__content">
+            <div class="hero__text">
+              <div class="hero__title-wrapper">
+                <h1 class="hero__title">Your digital business is in good hands with us!</h1>
+              </div>
+              <div class="hero__desc-wrapper">
+                <p class="hero__desc">
+                  Make your work easier with an integrated ecosystem that lets all departments work properly together.
+                </p>
+              </div>
+            </div>
+            <div class="hero__links-wrapper">
+              <a class="hero__link hero__link--video" href="#">Watch Video</a>
+              <a class="hero__link" href="#">Get Started</a>
+            </div>
+          </div>
+          <picture class="hero__picture">
+            <source media="(min-width: 768px)" srcset="./images/macbookdesktop.png 1x, ./images/macbookdesktop@2x.png 2x">
 
+            <img class="hero__img" src="./images/macbook.png"
+            width="343"
+            height="200"
+            srcset="./images/macbook.png 1x, ./images/macbook@2x.png 2x"
+            alt="Macbook's image and showed statistic">
+          </picture>
+        </div>
+      </div>
+    </section>
+    <!-- Section hero finished -->
+    <section class="site-main__software software">
+
+    </section>
   </main>
   <!-- Site main end -->
-
+  
   <!-- Site footer begin -->
   <footer class="site-footer">
-
+    
   </footer>
   <!-- Site footer end -->
+  
+  
+  <script src="./js/main.js"></script>
 </body>
 </html>

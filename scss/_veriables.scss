@@ -3,6 +3,7 @@
 :root {
   --main-ff: "Nunito", "Arial", sans-serif;
   --secondary-ff: "Roboto", "Arial", sans-serif;
+  --body-color: #fff;
   --main-color: #211f25;
   --secondary-color: #fff;
   --extra-color: #000;
@@ -11,10 +12,12 @@
   --bg-color: #fcfbff;
   --extra-bg-color: #f4fbff;
   --article-bg-color: #6b50ff;
+  --menu-color: #7e35eb;
 }
 
 $main-ff:var(--main-ff);
 $secondary-ff:var(--secondary-ff);
+$body-color:var(--body-color);
 $main-color:var(--main-color);
 $secondary-color:var(--secondary-color);
 $extra-color:var(--extra-color);
@@ -22,3 +25,4 @@ $links-color:var(--links-color);
 $bg-color:var(--bg-color);
 $extra-bg-color:var(--extra-bg-color);
 $article-bg-color:var(--article-bg-color);
+$menu-color:var(--menu-color);
