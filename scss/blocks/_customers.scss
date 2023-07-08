@@ -124,6 +124,7 @@
 .slick-next {
   display: none !important;
   right: 0;
+  z-index: 3;
   width: 53px;
   height: 53px;
   &::before {
@@ -135,6 +136,7 @@
   display: none !important;
   width: 53px;
   height: 53px;
+  z-index: 3;
   &::before {
     content: "";
   }
@@ -215,6 +217,14 @@
 }
 
 @include m.responsive(1314px) {
+  .slick-next {
+    display: block !important;
+  }
+
+  .slick-prev {
+    display: block !important;
+  }
+  
   .customer__btn {
     display: flex;
   }

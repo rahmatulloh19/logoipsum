@@ -147,6 +147,7 @@
   }
   
   .pricing__item {
+    padding: 32px;
     @include m.transition(border-color color background-color);
     &:hover {
       border-color: v.$links-color;
@@ -167,6 +168,9 @@
   
   .pricing__cash {
     text-align: center;
+    &:nth-of-type(2) {
+      margin-bottom: 40px;
+    }
   }
   
   .pricing__link {
