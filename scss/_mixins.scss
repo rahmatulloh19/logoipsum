@@ -6,11 +6,6 @@
   align-items: $ai;
 }
 
-// @mixin flow() {
-//   flex-direction: $fxd;
-
-// }
-
 @mixin btn($w, $h, $bgi) {
   display: block;
   width: $w;

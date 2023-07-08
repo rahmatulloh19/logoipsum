@@ -4,7 +4,7 @@
 /* Protection section styles started */
 
 .protection {
-  padding-bottom: 66px;
+  padding-bottom: 33px;
 }
 
 .protection__list {
@@ -101,8 +101,14 @@
   .protection__item:last-child .protection__item-inner {
     flex-direction: row;
   }
-  
+
+  .protection__subtitle {
+    font-size: 48px;
+    letter-spacing: -0.48px;
+  }
+
   .protection__img {
+    width: 620px;
     margin-bottom: 0;
   }
   

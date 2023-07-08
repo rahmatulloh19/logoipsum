@@ -1,11 +1,13 @@
 @use "visually-hidden";
 @use "container";
+@use "../../slick-1.8.1/slick/slick";
+@use "../../slick-1.8.1/slick/slick-theme";
 @use "header";
 @use "hero";
 @use "software";
 @use "protection";
 @use "customers";
 @use "pricing";
-@use "contact";
+@use "article";
 @use "news";
 @use "footer";
