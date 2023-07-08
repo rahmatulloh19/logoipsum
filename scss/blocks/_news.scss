@@ -121,6 +121,10 @@
 }
 
 @include m.responsive(768px) {
+  .dark-mode .news {
+    background-color: #211f25;
+  }
+
   .news__item {
     column-gap: 30px;
   }
