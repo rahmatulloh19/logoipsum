@@ -1,5 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Icon">
-<path id="Vector" d="M11.7351 3.87962L10.3812 5.23356L15.7393 10.6013H4.05322V12.5218H15.7393L10.3812 17.8895L11.7351 19.2435L19.4171 11.5615L11.7351 3.87962Z" fill="#FF94C7"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="#FF94C7" d="m11.735 3.88-1.354 1.354L15.74 10.6H4.053v1.92H15.74l-5.358 5.369 1.354 1.354 7.682-7.682-7.682-7.682Z"/></svg>

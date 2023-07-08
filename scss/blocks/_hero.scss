@@ -70,7 +70,6 @@
 }
 
 
-
 @include m.responsive(630px) {
   .hero__title {
     margin-bottom: 14px;
@@ -112,7 +111,6 @@
       margin-bottom: 24px;
     }
   }
-
 }
 
 @include m.responsive(1024px) {
@@ -166,9 +164,7 @@
   }
   
   .hero__img {
-    width: auto;
     margin: 0 auto;
   }
 }
-
 /* Hero styles finished */

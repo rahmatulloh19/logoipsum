@@ -45,6 +45,11 @@
   background-color: transparent;
   border: 1px solid v.$links-color;
   border-radius: 50%;
+  @include m.transition(color background-color);
+  &:hover {
+    color: #fff;
+    background-color: v.$links-color;
+  }
 }
 
 .customer__btn-left {
@@ -100,11 +105,11 @@
 }
 
 .customer__user--darrell::before {
-  background-image: url("../../images/darrell.png") !important;
+  background-image: url("../../images/darrell.png");
 }
 
 .customer__user--henry::before {
-  background-image: url("../../images/henry.png") !important;
+  background-image: url("../../images/henry.png");
 }
 
 .customer__bold {
@@ -171,13 +176,13 @@
   }
  
 .slick-next {
-  // display: block;
+  display: none !important;
   right: -29px;
   z-index: 4;
 }
 
 .slick-prev {
-  // display: block;
+  display: none !important;
   width: 53px;
   height: 53px;
   left: -15px;
@@ -217,13 +222,13 @@
 }
 
 @include m.responsive(1314px) {
-  .slick-next {
-    display: block !important;
-  }
+  // .slick-next {
+  //   display: block !important;
+  // }
 
-  .slick-prev {
-    display: block !important;
-  }
+  // .slick-prev {
+  //   display: block !important;
+  // }
   
   .customer__btn {
     display: flex;

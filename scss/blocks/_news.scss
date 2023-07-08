@@ -34,16 +34,12 @@
   }
 }
 
-.news__item--full {
-  &::before {
+.news__item--full::before {
     background-image: url("../../images/full.png");
-  }
 }
 
-.news__item--perfect {
-  &::before {
-    background-image: url("../../images/perfect.png");
-  }
+.news__item--perfect::before {
+  background-image: url("../../images/perfect.png");
 }
 
 .news__item-inner {
@@ -136,7 +132,6 @@
 @include m.responsive(1024px) {
   .news__list {
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 32px;
   } 
