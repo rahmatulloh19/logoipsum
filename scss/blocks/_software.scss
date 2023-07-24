@@ -4,8 +4,7 @@
 /* Software section styles started */
 
 .software {
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding: 0 0 80px;
   text-align: center;
 }
 
@@ -38,22 +37,16 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
-  &:before {
-    @include m.psevdo-el(100%, 266px, "../../images/task.svg");
-    margin: 0 auto 33px;
-  }
 }
 
-.software__item--automation {
+.software__item-img {
+  max-width: 357px;
+  width: 100%;
+  margin: 0 auto 33px;
+}
+
+.software__item:hover {
   background-color: v.$li-bg-color;
-}
-
-.software__item--automation::before {
-  background-image: url("../../images/automotion.svg");
-}
-
-.software__item--tool::before {
-  background-image: url("../../images/tool.svg");
 }
 
 .software__subtitle {
@@ -61,7 +54,7 @@
   color: v.$main-color;
 }
 
-.software__desc {
+.software__inner-desc {
   @include m.default-text(40px, $lh:155%);
   color: v.$text-color;
 }
@@ -75,7 +68,7 @@
 
 
 @include m.responsive(375px) {
-  .hero__title {
+  .software__title {
     font-size: 36px;
   }
 
@@ -86,7 +79,7 @@
   }
 }
 
-@include m.responsive(630px) {
+@include m.responsive(650px) {
   .software__item {
     display: flex;
     align-items: center;
@@ -96,23 +89,27 @@
     }
   }
 
+  .software__item-img {
+    width: auto;
+  }
+
   .software__item-inner {
     flex-shrink: 3;
     text-align: left;
   }
 
-  .software__subtitle {
-    text-align: left;
-  }
+  // .software__subtitle {
+  //   text-align: left;
+  // }
 
-  .software__desc {
-    text-align: left;
-  }
+  // .software__inner-desc {
+  //   text-align: left;
+  // }
 }
 
 @include m.responsive(1024px) {
   .software {
-    padding: 60px 0 100px;
+    padding: 0 0 100px;
   }
   
   .software__list {
@@ -121,7 +118,7 @@
 
   .software__item {
     display: block;
-    max-width: 343px;
+    max-width: 33vw;
     border-radius: 8px;
     background-color: transparent;
     @include m.transition(background-color color);
@@ -137,6 +134,24 @@
     &::before {
       width: auto;
     }
+  }
+
+  .software__item-inner {
+    text-align: center;
+  }
+  .software__item-img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@include m.responsive(1280px) {
+  .software__list {
+    column-gap: 32px;
+  }
+
+  .software__item {
+    max-width: 405px;
   }
 }
 /* Software section styles finished */

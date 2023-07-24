@@ -18,13 +18,12 @@
   border: none;
 }
 
-@mixin default-text($mb, $fz:16px, $fw:400, $lh:normal, $ta:center) {
+@mixin default-text($mb, $fz:16px, $fw:400, $lh:normal) {
   margin-top: 0;
   margin-bottom: $mb;
   font-size: $fz;
   font-weight: $fw;
   line-height: $lh;
-  text-align: $ta;
 }
 
 @mixin unstyled-list {

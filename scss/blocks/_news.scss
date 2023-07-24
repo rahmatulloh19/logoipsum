@@ -8,6 +8,10 @@
   background-color: v.$extra-bg-color;
 }
 
+.news__inner-text {
+  text-align: center;
+}
+
 .news__title {
   @include m.default-text(5px, 36px, 700);
   letter-spacing: -0.36px;
@@ -19,6 +23,19 @@
   color: v.$text-color;
 }
 
+.news__link {
+  display: none;
+  max-width: 115px;
+  padding: 16px;
+  line-height: 23px;
+  color: v.$links-color;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid v.$links-color;
+  border-radius: 32px;  
+}
+
 .news__list {
   @include m.unstyled-list;
 }
@@ -28,18 +45,11 @@
   &:not(:last-child) {
     margin-bottom: 60px;
   }
-  &::before{
-    @include m.psevdo-el(100%, 293px, "../../images/thing.png", $bgz:100%);
-    margin: 0 auto;
-  }
 }
 
-.news__item--full::before {
-    background-image: url("../../images/full.png");
-}
-
-.news__item--perfect::before {
-  background-image: url("../../images/perfect.png");
+.news__img {
+  width: 100%;
+  margin-bottom: 27px;
 }
 
 .news__item-inner {
@@ -70,16 +80,16 @@
 }
 
 .news__subtitle {
-  @include m.default-text(8px, 24px, 600, 140%, left);
+  @include m.default-text(8px, 24px, 600, 140%);
   color: v.$main-color;
 }
 
 .news__inner-desc {
-  @include m.default-text(31px, $lh:150%, $ta:left);
+  @include m.default-text(31px, $lh:150%);
   color: v.$text-color;
 }
 
-.news__link {
+.news__inner-link {
   display: inline-flex;
   column-gap: 8px;
   align-items: center;
@@ -92,7 +102,7 @@
   }
 }
 
-.dark-mode .news__link::after {
+.dark-mode .news__inner-link::after {
   background-image: url("../../images/newsdarkarrow.svg");
 }
 
@@ -100,6 +110,11 @@
   .news__item::before {
     background-size: 343px;
     margin-bottom: 27px;
+  }
+
+  .news__img {
+    max-width: 343px;
+    margin: 0 auto 27px;
   }
 }
 
@@ -130,6 +145,15 @@
 }
 
 @include m.responsive(1024px) {
+  .news__inner {
+    @include m.layout;
+    text-align: left;
+  }
+
+  .news__inner-text {
+    text-align: left;
+  }
+
   .news__list {
     display: flex;
     justify-content: space-between;
@@ -146,7 +170,7 @@
     &:hover {
       background-color: #fff;
     }
-    &:hover .news__link::after {
+    &:hover .news__inner-link::after {
       background-image: url("../../images/newshoverarrow.svg");
     }
     &::before {
@@ -155,8 +179,12 @@
     }
   }
 
+  .news__link {
+    display: block;
+  }
 
-  .dark-mode .news__item:hover .news__link::after {
+
+  .dark-mode .news__item:hover .news__inner-link::after {
     background-image: url("../../images/newsdarkarrow.svg");
   }
 

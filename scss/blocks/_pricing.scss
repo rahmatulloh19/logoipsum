@@ -6,6 +6,7 @@
 .pricing {
   padding-top: 40px;
   padding-bottom: 40px;
+  text-align: center;
 }
 
 .pricing__title {
@@ -103,12 +104,20 @@
 }
 
 @include m.responsive(630px) {
+  .pricing {
+    padding: 70px 0;
+  }
+
   .pricing__item-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
+  .pricing__desc {
+    margin-bottom: 55px;
+  }
+
   .pricing__subtitle {
     text-align: left;
   }
@@ -128,6 +137,10 @@
 }
 
 @include m.responsive(1024px) {
+  .pricing {
+    padding: 100px 0;
+  }
+
   .pricing__title {
     margin-bottom: 16px;
     font-size: 48px;
@@ -143,10 +156,12 @@
   .pricing__list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
   
   .pricing__item {
+    max-width: 405px;
+    flex-grow: 1;
     padding: 32px;
     @include m.transition(border-color color background-color);
     &:hover {
@@ -160,6 +175,7 @@
   
   .pricing__item-inner {
     display: block;
+    text-align: left;
   }
   
   .pricing__subtitle {
@@ -180,6 +196,10 @@
   
   .pricing__link--inner {
     display: none;
+  }
+
+  .pricing__inner-item {
+    text-align: left;
   }
 }
 /* Pricing section styles finished */

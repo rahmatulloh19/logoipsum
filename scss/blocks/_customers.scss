@@ -7,11 +7,12 @@
   padding-top: 33px;
   padding-bottom: 40px;
   background-color: v.$bg-color;
+  text-align: center;
 }
 
 .customer__inner {
-  width: calc(100% - 60px);
-  margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 24px;
 }
 
 .customer__title {
@@ -72,6 +73,7 @@
   margin: 0 auto;
   padding-left: 0;
   list-style: none;
+  text-align: left;
 }
 
 .customer__item {
@@ -170,65 +172,83 @@
 }
 
 @include m.responsive(768px) {
+  .customer {
+    padding-top: 33px;
+    padding-bottom: 70px;
+    text-align: left;
+  }
+
+  .customer__title {
+    font-size: 42px;
+  }
+
   .customers__desc {
+    margin-bottom: 55px;
     line-height: 155%;
     letter-spacing: 0.32px;
   }
- 
-.slick-next {
-  display: none !important;
-  right: -29px;
-  z-index: 4;
-}
 
-.slick-prev {
-  display: none !important;
-  width: 53px;
-  height: 53px;
-  left: -15px;
-  z-index: 4;
-}
-
+  .slick-list {
+    margin-bottom: 35px;
+  }
+  
+  .slick-next {
+    display: none !important;
+    right: -29px;
+    z-index: 4;
+  }
+  
+  .slick-prev {
+    display: none !important;
+    width: 53px;
+    height: 53px;
+    left: -15px;
+    z-index: 4;
+  }
+  
 }
 
 @include m.responsive(1024px) {
+  .customer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+
+  .customer__inner {
+    margin: 0 auto;
+  }
+  
   .customer__title {
     font-size: 48px;
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-
+  
   .customer__btn {
     display: none;
   }
-
+  
   .slick-track {
     display: flex;
     column-gap: 15px;
   }
-
+  
   .slick-list {
     margin-bottom: 50px;
   }
-
-  .slick-dots li button:before {
-    margin-bottom: 60px;
-  }
-
+  
   .customer__item {
     max-width: 405px !important;
     flex-shrink: 0;
   }
+
+  .customer__desc {
+    margin-bottom: 80px;
+  }
 }
 
 @include m.responsive(1314px) {
-  // .slick-next {
-  //   display: block !important;
-  // }
-
-  // .slick-prev {
-  //   display: block !important;
-  // }
   
   .customer__btn {
     display: flex;
@@ -237,7 +257,7 @@
   .customer__btn-left {
     left: calc(50% - 635px);
   }
-
+  
   .customer__btn-right {
     right: calc(50% - 649px);
   }

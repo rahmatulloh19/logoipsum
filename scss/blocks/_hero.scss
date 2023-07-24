@@ -4,6 +4,8 @@
 /* Hero styles started */
 
 .hero {
+  max-width: 1600px;
+  margin: 0 auto;
   color: v.$secondary-color;
   background-image: url("../../images/mobile-light.png");
   background-repeat: no-repeat;
@@ -12,8 +14,7 @@
 }
 
 .hero__inner {
-  margin-top: 45px;
-  padding-bottom: 40px;
+  padding: 45px 0 80px;
 }
 
 .hero__title-wrapper {
@@ -22,7 +23,7 @@
 }
 
 .hero__title {
-  @include m.default-text(10px, $fz:36px, $fw:800, $lh:42px);
+  @include m.default-text(10px, $fz:32px, $fw:800, $lh:42px);
   letter-spacing: -0.36px;
 }
 
@@ -32,7 +33,7 @@
 }
 
 .hero__desc {
-  @include m.default-text(80px, $lh:22px);
+  @include m.default-text(80px, 16px, $lh:22px);
   letter-spacing: 0.16px;
 }
 
@@ -41,7 +42,8 @@
   max-width: 100%;
   width: 100%;
   padding: 17px 16px;
-  @include m.default-text(10px, $fw:600, $lh:155%);
+  font-weight: 600;
+  line-height: 155%; /* 24.8px */
   letter-spacing: 0.16px;
   color: v.$body-color;
   text-decoration: none;
@@ -56,7 +58,8 @@
 .hero__link--video {
   @include m.layout(center);
   column-gap: 16px;
-  padding: 16px;
+  margin-bottom: 10px;
+  padding: 11px 16px;
   color: #fff;
   background-color: transparent;
   border-color: #fff;
@@ -66,7 +69,18 @@
 }
 
 .hero__img {
+  max-width: 996px;
   width: 100%;
+}
+
+@include m.responsive(375px) {
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .hero__desc {
+    font-size: 16px;
+  }
 }
 
 
@@ -84,6 +98,10 @@
     background-image: url("../../images/dekstop-light.png");
   }
 
+  .hero__inner {
+    padding: 73px 0 200px;
+  }
+
   .hero__content {
     @include m.layout;
   }
@@ -93,6 +111,8 @@
   }
   
   .hero__title {
+    font-size: 46px;
+    letter-spacing: -0.56px;
     text-align: left;
     margin-bottom: 24px;
   }
