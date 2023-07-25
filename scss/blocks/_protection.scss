@@ -103,8 +103,11 @@
 
   .protection__item-inner {
     flex-direction: row;
-    flex-direction: row-reverse;
     column-gap: 30px;
+  }
+
+  .protection__item:nth-child(2) .protection__item-inner {
+    flex-direction: row-reverse;
   }
 
   .protection__subtitle {

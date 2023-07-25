@@ -1262,10 +1262,15 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    flex-direction: row-reverse;
     -webkit-column-gap: 30px;
        -moz-column-gap: 30px;
             column-gap: 30px;
+  }
+  .protection__item:nth-child(2) .protection__item-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .protection__subtitle {
     font-size: 48px;
