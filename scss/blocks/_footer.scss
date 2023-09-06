@@ -117,26 +117,26 @@
     justify-content: start;
     column-gap: 24px;
   }
-
+  
 }
 
 @include m.responsive(630px) {
   .site-footer__lists-wrapper {
     column-gap: 32px;
   }
-
+  
   .site-footer__list {
     display: flex;
     align-items: center;
     column-gap: 32px;
   }
-
+  
   .site-footer__item {
     &:first-child {
       margin-bottom: 0;
     }
   }
-
+  
   .site-footer__form {
     display: flex;
     flex-direction: column;
@@ -161,45 +161,14 @@
   }
 }
 
-@include m.responsive(768px) {
-  .dark-mode .site-footer {
-    background-color: #000;
-  }
-
-  .site-footer__start {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-/* Site footer styles end */
-
-/* Retina background images */
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
-  
+@include m.retina {
   .hero {
     background-image: url("../../images/mobile-light@2x.png");
     background-size: 100% 100%;
-  }    
-  .hero {
-    background-image: url("../../images/dekstop-light@2x.png");
-    background-size: 100% 100%;
   }
-
   .dark-mode .hero {
     background-image: url("../images/mobile-dark@2x.png");
   }
-  .dark-mode .hero {
-    background-image: url("../images/dekstop-dark@2x.png");
-  }
-  
   .customer__user::before {
     background-image: url("../../images/simmons@2x.png");
   }
@@ -209,13 +178,26 @@ only screen and (                min-resolution: 2dppx) {
   .customer__user--henry::before {
     background-image: url("../../images/henry@2x.png");
   }
-  .news__item::before {
-    background-image: url("../../images/thing@2x.png");
+}
+
+@include m.responsive(768px) {
+  .dark-mode .site-footer {
+    background-color: #000;
   }
-  .news__item--full::before {
-    background-image: url("../../images/full@2x.png");
+  
+  .site-footer__start {
+    display: flex;
+    justify-content: space-between;
   }
-  .news__item--perfect::before {
-    background-image: url("../../images/perfect@2x.png");
+  @include m.retina {
+    .hero {
+      background-image: url("../../images/dekstop-light@2x.png");
+      background-size: 100% 100%;
+    }
+
+    .dark-mode .hero {
+      background-image: url("../images/dekstop-dark@2x.png");
+    }
   }
 }
+/* Site footer styles end */

@@ -161,7 +161,9 @@ template {
 
 [hidden] {
   display: none;
-} /* Fonts Nunito */
+}
+
+/* Fonts Nunito */
 @font-face {
   font-family: "Nunito";
   font-weight: 400;
@@ -299,9 +301,8 @@ img {
   }
 }
 .dark-mode .site-header__mode {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .menu-color {
@@ -1323,7 +1324,7 @@ img {
 
 .customer__list-wrapper {
   position: relative;
-  max-width: calc(100% - 20px);
+  max-width: calc(99vw - 20px);
   margin: 0 auto;
 }
 
@@ -2365,6 +2366,25 @@ img {
     text-align: right;
   }
 }
+/* Retina background images */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../../images/mobile-light@2x.png");
+    background-size: 100% 100%;
+  }
+  .dark-mode .hero {
+    background-image: url("../images/mobile-dark@2x.png");
+  }
+  .customer__user::before {
+    background-image: url("../../images/simmons@2x.png");
+  }
+  .customer__user--darrell::before {
+    background-image: url("../../images/darrell@2x.png");
+  }
+  .customer__user--henry::before {
+    background-image: url("../../images/henry@2x.png");
+  }
+}
 @media only screen and (min-width: 768px) {
   .dark-mode .site-footer {
     background-color: #000;
@@ -2377,40 +2397,15 @@ img {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  /* Retina background images */
 }
-/* Site footer styles end */
-/* Retina background images */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .hero {
-    background-image: url("../../images/mobile-light@2x.png");
-    background-size: 100% 100%;
-  }
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../../images/dekstop-light@2x.png");
     background-size: 100% 100%;
   }
   .dark-mode .hero {
-    background-image: url("../images/mobile-dark@2x.png");
-  }
-  .dark-mode .hero {
     background-image: url("../images/dekstop-dark@2x.png");
   }
-  .customer__user::before {
-    background-image: url("../../images/simmons@2x.png");
-  }
-  .customer__user--darrell::before {
-    background-image: url("../../images/darrell@2x.png");
-  }
-  .customer__user--henry::before {
-    background-image: url("../../images/henry@2x.png");
-  }
-  .news__item::before {
-    background-image: url("../../images/thing@2x.png");
-  }
-  .news__item--full::before {
-    background-image: url("../../images/full@2x.png");
-  }
-  .news__item--perfect::before {
-    background-image: url("../../images/perfect@2x.png");
-  }
-}/*# sourceMappingURL=main.css.map */
+}
+/* Site footer styles end *//*# sourceMappingURL=main.css.map */
